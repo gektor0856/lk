@@ -12,4 +12,19 @@ class Inter_model2 extends CI_Model {
 		else return (false);
 	}
 
+	function get_role($data){
+		$this->db->where('login',$data['login']);
+		$this->db->where('password',$data['password']);
+		$this->db->select('role');
+		$query = $this->db->get('users');
+
+		$tmp;
+		foreach ($query->result() as $row)
+		{
+		   $tmp = $row->role;
+		}
+
+		return $tmp;
+	}
+
 }

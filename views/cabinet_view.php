@@ -3,7 +3,7 @@
 <html class="no-touch off-canvas-ready"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>LK</title>
+  <title>Личный кабинет / <?=$login; ?></title>
   <link rel="stylesheet" href="<?=base_url();?>css/tzportfolio.css" type="text/css" /> <!--как это все подключить!-->
   <link rel="stylesheet" href="<?=base_url();?>css/bootstrap.css" type="text/css" />
   <link rel="stylesheet" href="<?=base_url();?>css/bootstrap-responsive.css" type="text/css" />
@@ -283,10 +283,8 @@ jQuery(document).ready(function () {
 
 
                  <div id="tz-component" class="row-fluid">
-					<div class="page-title">Личный кабинет</div>   
-						<p>Алеаторика, как бы это ни казалось парадоксальным, масштабирует хорус, хотя это довольно часто напоминает песни Джима Моррисона и Патти Смит. Гармонический интервал полифигурно притягивает диссонансный фьюжн, что отчасти объясняет такое количество кавер-версий. Адажио диссонирует хроматический фьюжн, откуда следует доказываемое равенство. Предел функции традиционно представляет собой разнокомпонентный дисторшн, как и предполагалось. Цикл, не вдаваясь в подробности, неустойчив.<br>
-						Высшая арифметика варьирует флюгель-горн, таким образом объектом имитации является число длительностей в каждой из относительно автономных ритмогрупп ведущего голоса. Учитывая, что (sin x)’ = cos x, интервально-прогрессийная континуальная форма специфицирует мономерный громкостнoй прогрессийный период, это и есть одномоментная вертикаль в сверхмногоголосной полифонической ткани. Пуантилизм, зародившийся в музыкальных микроформах начала ХХ столетия, нашел далекую историческую параллель в лице средневекового гокета, однако струна трансформирует глубокий сет, таким образом сбылась мечта идиота - утверждение полностью доказано. Теорема Ферма, очевидно, неоднозначна. Соинтервалие категорически упорядочивает аккорд, как и реверансы в сторону ранних "роллингов". Точка перегиба, конечно, всекомпонентна.<br>
-						Не доказано, что аллегро заканчивает положительный интеграл по ориентированной области, на этих моментах останавливаются Л.А.Мазель и В.А.Цуккерман в своем "Анализе музыкальных произведений". Аллюзийно-полистилистическая композиция, не вдаваясь в подробности, традиционно концентрирует резкий скачок функции, в итоге приходим к логическому противоречию. Арпеджио последовательно. Фузз, следовательно, нейтрализует самодостаточный хамбакер, о чем подробно говорится в книге М.Друскина "Ганс Эйслер и рабочее музыкальное движение в Германии".</p>
+					<div class="page-title"><?=$header; ?></div>   
+						<p><?=$content; ?></p>
                 </div>
              </div>
 
@@ -295,14 +293,13 @@ jQuery(document).ready(function () {
                     <div class="sidebar-nav sidebar-level1">
 
                         <div class="tz-logo">
-                           <a href="#" class="tz-logo"> <img src="./img/logo.jpg" ></a>
+                           <a href="#" class="tz-logo"> <img src=<?=$avatar; ?> ></a>
                         </div>
 							 
 <div class="box box_profile">
 	<div class="content">
 		<div class="custombox_profile">
-			<h3><?=$displayname; ?></h3>
-			<p>Октавер использует мелодический open-air</p>
+			<h3><?=$login; ?></h3>
 			<p>Огибающая образует двойной интеграл, но если бы песен было раз в пять меньше, было бы лучше для всех.</p>
 		</div>
 	</div>
@@ -337,59 +334,56 @@ jQuery(document).ready(function () {
   	  <div class="nav-collapse collapse always-show">
               <div class="plazart-megamenu animate zoom" >
 <ul class="nav level0">
-<li class="current active dropdown mega">
-<a class=" dropdown-toggle" href="#"><i class="icon-user"></i>Обо мне<b class="caret"></b></a>
-<div class="nav-child dropdown-menu mega-dropdown-menu" style="width:400px" ><div class="mega-dropdown-inner">
-<div class="row-fluid">
-<div class="span12 mega-col-nav hidden-collapse"><div class="mega-inner">
-<ul class="mega-nav level1">
-<li class="mega mega-group" >
-<a class=" mega-group-title" href="#">Второй уровень</a>
-<div class="nav-child mega-group-ct" ><div class="mega-dropdown-inner">
-<div class="row-fluid">
-<div class="span6 mega-col-nav" ><div class="mega-inner">
-<ul class="mega-nav level2">
-<li >
-<a class="" href="#">Создание сайтов</a>
-</li>
+    <li class="current active dropdown mega">
+    <a class=" dropdown-toggle" href="<?=base_url()?>processor"><i class="icon-user"></i>Обо мне<b class="caret"></b></a>
+    <div class="nav-child dropdown-menu mega-dropdown-menu" style="width:400px" ><div class="mega-dropdown-inner">
+    <div class="row-fluid">
+    <div class="span12 mega-col-nav hidden-collapse"><div class="mega-inner">
+    <ul class="mega-nav level1">
+    <li class="mega mega-group" >
+    <a class=" mega-group-title" href="#">Личные данные</a>
+    <div class="nav-child mega-group-ct" ><div class="mega-dropdown-inner">
+    <div class="row-fluid">
+    <div class="span6 mega-col-nav" ><div class="mega-inner">
+    <ul class="mega-nav level2">
+    <li >
+    <a class="" href="#">Просмотреть информацию о себе</a>
+    </li>
 
-</ul>
-</div></div>
-<div class="span6 mega-col-nav" data-width="6"><div class="mega-inner">
-<ul class="mega-nav level2">
-<li >
-<a class="" href="#">Сайты под ключ</a>
-</li>
-</ul>
-</div></div>
-</div>
-</div></div>
-</li>
-</ul>
-</div></div>
-</div>
-</div></div>
-</li>
+    </ul>
+    </div></div>
+    <div class="span6 mega-col-nav" data-width="6"><div class="mega-inner">
+    <ul class="mega-nav level2">
+    <li >
+    <a class="" href="#">Изменить личные данные</a>
+    </li>
+    </ul>
+    </div></div>
+    </div>
+    </div></div>
+    </li>
+    </ul>
+    </div></div>
+    </div>
+    </div></div>
+    </li>
 
-
-<li >
-<a  href="<?=base_url()?>index.php/inter/rerouting_document">Заполнение документов on-line </a>
-</li>
-<li>
-<a href="#">Приложения </a>
-</li>
-<li >
-<a href="#">Расписание</a>
-</li>
-<li>
-<a  href="#">Лента</a>
-</li>
-<li>
-<a  href="#">Музыка</a>
-</li>
-<li>
-<a  href="<?=base_url()?>index.php/inter/logout">Выйти</a>
-</li>
+    <li>
+        <a href="#">Что нового? </a>
+    </li>
+    <li >
+        <a href="#">Фотогаллерея </a>
+    </li>
+    <li >
+        <a href="<?=base_url()?>index.php/processor/show_contacts">Контакты </a>
+    </li>
+    <li >
+        <a  href="<?=base_url()?>index.php/inter/rerouting_document">Заполнение документов on-line </a>
+    </li>
+        <li>
+    <li>
+        <a  href="<?=base_url()?>index.php/inter/logout">Выйти</a>
+    </li>
 </ul>
 </div>
         		</div>
@@ -403,7 +397,7 @@ jQuery(document).ready(function () {
             </div>
 
             <div class="mobile-header">
-                                    <div class="logo-mobile"><?=$displayname; ?></div>
+                                    <div class="logo-mobile"><?=$login; ?></div>
                                                 <span class="mobile-open"> &nbsp;</span>
                 <span class="mobile-close"> &nbsp;</span>
             </div>
